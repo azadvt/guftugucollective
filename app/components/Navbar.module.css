@@ -35,8 +35,7 @@
   font-weight: 700;
   font-style: italic;
   font-size: 1.5rem;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--yellow);
+  color: var(--yellow);
 }
 
 .logoSub {
