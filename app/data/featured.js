@@ -6,7 +6,7 @@ export const featuredPrograms = [
     date: 'February 1 – 7, 2026',
     venue: 'Lalithakala Art Gallery, Kozhikode',
     theme: 'Genocide',
-    desc: 'A week-long art exhibition that opened the Guftugu Film Festival — works by artists responding to genocide, memory, and collective violence. The exhibition ran for seven days at Lalithakala Art Gallery, culminating in the film festival on February 8.',
+    desc: 'A week-long art exhibition that opened the Guftugu Film Festival. Works by artists responding to genocide, memory, and collective violence. The exhibition ran for seven days at Lalithakala Art Gallery, culminating in the film festival on February 8.',
     photos: [
       '/images/programs/guftugu-art-exhibition/216fd484-a40e-4e49-ab83-31235a9e97c0.jpeg',
       '/images/programs/guftugu-art-exhibition/261aa1cd-9013-4ccc-9a63-7b84a561f5bc.jpeg',
@@ -27,7 +27,7 @@ export const featuredPrograms = [
     date: 'February 8, 2026',
     venue: 'Kozhikode Shikshak Sadhan',
     theme: 'Genocide',
-    desc: 'The first Guftugu Film Festival — a day of screenings, conversations, and collective witnessing. Films and discussions centred around genocide, memory, and the politics of silence. Organised in collaboration with M.N Cultural Center.',
+    desc: 'The first Guftugu Film Festival. A day of screenings, conversations, and collective witnessing. Films and discussions centred around genocide, memory, and the politics of silence. Organised in collaboration with M.N Cultural Center.',
     photos: [
       '/images/programs/guftugu-film-festival/04c2195b-3eab-41bf-9c51-b7272e52059f.jpeg',
       '/images/programs/guftugu-film-festival/48760d77-1acc-4191-a287-8f4ee35b7061.jpeg',
@@ -41,11 +41,11 @@ export const featuredPrograms = [
   {
     id: 'john-abraham-film-fest',
     title: 'From Odessa to Cannes',
-    subtitle: 'John Abraham Film Fest — A Film Festival Honouring John Abraham and His Cinema',
+    subtitle: 'John Abraham Film Fest. A Film Festival Honouring John Abraham and His Cinema',
     date: 'July, 2026',
     venue: 'Vedhi Auditorium, Kairali Sree, Kozhikode',
     theme: '',
-    desc: 'A festival dedicated to John Abraham — the filmmaker who proved cinema could belong to the people. Screenings, discussions, and a celebration of the man whose Odessa Collective remains the blueprint for everything we do.',
+    desc: 'A festival dedicated to John Abraham, the filmmaker who proved cinema could belong to the people. Screenings, discussions, and a celebration of the man whose Odessa Collective remains the blueprint for everything we do.',
     photos: [
       '/images/programs/john-abraham-film-fest/10b82ec5-2847-428b-9aba-126429bc671f.jpeg',
       '/images/programs/john-abraham-film-fest/1e7014a1-5d57-4e41-b346-29a95c68cb18.jpeg',

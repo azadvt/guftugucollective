@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <span className={styles.logo}>guftugu</span>
             <span className={styles.logoSub}>collective</span>
-            <p className={styles.tagline}>Art beyond profit. Kozhikode, Kerala.</p>
+            <p className={styles.tagline}>Art Beyond Commerce. Kozhikode, Kerala.</p>
           </div>
           <div className={styles.linksCol}>
             <h4>Navigate</h4>

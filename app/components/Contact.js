@@ -67,7 +67,7 @@ export default function Contact() {
             {submitted ? (
               <div className={styles.success}>
                 <p className={styles.successTitle}>Message sent.</p>
-                <p className={styles.successText}>We{"'"}ll get back to you soon — usually within a couple of days. If it{"'"}s urgent, DM us on Instagram.</p>
+                <p className={styles.successText}>We{"'"}ll get back to you soon, usually within a couple of days. If it{"'"}s urgent, DM us on Instagram.</p>
               </div>
             ) : (
               <form className={styles.form} onSubmit={handleSubmit}>
