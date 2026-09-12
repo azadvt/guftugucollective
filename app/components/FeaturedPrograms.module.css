@@ -258,14 +258,14 @@
 
 .lbClose {
   position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  background: rgba(14, 40, 20, 0.7);
-  border: 1px solid rgba(232, 200, 64, 0.2);
+  top: 4.5rem;
+  right: 1.5rem;
+  background: rgba(14, 40, 20, 0.8);
+  border: 1px solid rgba(232, 200, 64, 0.25);
   color: var(--cream);
   cursor: pointer;
   z-index: 1001;
-  padding: 0.6rem;
+  padding: 0.7rem;
   transition: all 0.3s;
 }
 
