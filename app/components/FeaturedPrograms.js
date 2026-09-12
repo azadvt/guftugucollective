@@ -47,7 +47,7 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
   );
 }
 
-function ExpandedGallery({ program }) {
+function ExpandedGallery({ program, onBack }) {
   const [lbOpen, setLbOpen] = useState(false);
   const [lbIndex, setLbIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
@@ -61,6 +61,10 @@ function ExpandedGallery({ program }) {
 
   return (
     <div className={styles.expanded}>
+      <button className={styles.backBtn} onClick={onBack}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+        Back to programs
+      </button>
       <div className={styles.expandedInfo}>
         <div>
           {program.theme && <span className={styles.theme}>{program.theme}</span>}
@@ -184,7 +188,7 @@ export default function FeaturedPrograms() {
 
         {activeProgram && (
           <div ref={galleryRef} className={styles.gallerySection}>
-            <ExpandedGallery key={activeProgram.id} program={activeProgram} />
+            <ExpandedGallery key={activeProgram.id} program={activeProgram} onBack={() => setActiveId(null)} />
           </div>
         )}
       </div>
