@@ -165,4 +165,14 @@
     gap: 1.5rem;
   }
 
+  .statNum {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .numbers {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
 }

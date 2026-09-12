@@ -5,10 +5,36 @@ import styles from './Contact.module.css';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+
+    const form = e.target;
+    const data = {
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      reason: form.elements.reason.value,
+      message: form.elements.message.value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -26,7 +52,7 @@ export default function Contact() {
             </p>
 
             <div className={styles.details}>
-<a href="https://www.instagram.com/guftugu_collective/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <a href="https://www.instagram.com/guftugu_collective/" target="_blank" rel="noopener noreferrer" className={styles.link}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" /></svg>
                 @guftugu_collective
               </a>
@@ -35,7 +61,6 @@ export default function Contact() {
                 Guftugu on YouTube
               </a>
             </div>
-
           </div>
 
           <div>
@@ -46,19 +71,22 @@ export default function Contact() {
               </div>
             ) : (
               <form className={styles.form} onSubmit={handleSubmit}>
-                <input type="text" placeholder="Your name" aria-label="Your name" required />
-                <input type="email" placeholder="Email" aria-label="Email address" required />
-                <select defaultValue="" aria-label="Reason for contact" required>
+                <input name="name" type="text" placeholder="Your name" aria-label="Your name" required />
+                <input name="email" type="email" placeholder="Email" aria-label="Email address" required />
+                <select name="reason" defaultValue="" aria-label="Reason for contact" required>
                   <option value="" disabled>What brings you here?</option>
-                  <option value="attend">I want to attend a screening</option>
-                  <option value="host">I want to host a screening in my city</option>
-                  <option value="submit">I have a film I{"'"}d like to submit</option>
-                  <option value="collaborate">Let{"'"}s collaborate on something</option>
-                  <option value="volunteer">I want to volunteer</option>
-                  <option value="other">Something else entirely</option>
+                  <option value="Attend a screening">I want to attend a screening</option>
+                  <option value="Host a screening">I want to host a screening in my city</option>
+                  <option value="Film submission">I have a film I{"'"}d like to submit</option>
+                  <option value="Collaboration">Let{"'"}s collaborate on something</option>
+                  <option value="Volunteer">I want to volunteer</option>
+                  <option value="Other">Something else entirely</option>
                 </select>
-                <textarea placeholder="Tell us more..." aria-label="Your message" rows={5}></textarea>
-                <button type="submit" className="btn btnPrimary btnFull">Send Message</button>
+                <textarea name="message" placeholder="Tell us more..." aria-label="Your message" rows={5}></textarea>
+                {error && <p className={styles.errorText}>Something went wrong. Try again or DM us on Instagram.</p>}
+                <button type="submit" className="btn btnPrimary btnFull" disabled={sending}>
+                  {sending ? 'Sending...' : 'Send Message'}
+                </button>
               </form>
             )}
           </div>
