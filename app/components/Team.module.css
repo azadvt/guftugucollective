@@ -66,9 +66,17 @@
 }
 
 @media (max-width: 768px) {
+  .regNo {
+    font-size: 0.65rem;
+  }
+
   .officeBearers {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .bearerName {
+    font-size: 1rem;
   }
 
   .execGrid {
@@ -76,8 +84,22 @@
   }
 }
 
-@media (max-width: 400px) {
-  .execGrid {
+@media (max-width: 480px) {
+  .officeBearers {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .bearerName {
+    font-size: 1.1rem;
+  }
+
+  .execGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 1rem;
+  }
+
+  .execName {
+    font-size: 0.82rem;
   }
 }
