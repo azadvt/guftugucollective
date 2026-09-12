@@ -50,7 +50,11 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 function ProgramBlock({ program, reversed }) {
   const [lbOpen, setLbOpen] = useState(false);
   const [lbIndex, setLbIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
   const photos = program.photos;
+  const gridPhotos = photos.slice(1);
+  const visibleGrid = showAll ? gridPhotos : gridPhotos.slice(0, 5);
+  const hiddenCount = gridPhotos.length - 5;
 
   const openLb = (i) => { setLbIndex(i); setLbOpen(true); };
   const goPrev = () => setLbIndex((p) => (p === 0 ? photos.length - 1 : p - 1));
@@ -100,7 +104,7 @@ function ProgramBlock({ program, reversed }) {
 
       {/* Photo grid — remaining photos */}
       <div className={styles.photoGrid}>
-        {photos.slice(1).map((photo, i) => (
+        {visibleGrid.map((photo, i) => (
           <div
             key={i}
             className={styles.photoCell}
@@ -119,6 +123,11 @@ function ProgramBlock({ program, reversed }) {
             <div className={styles.cellOverlay}></div>
           </div>
         ))}
+        {!showAll && hiddenCount > 0 && (
+          <button className={styles.showMore} onClick={() => setShowAll(true)}>
+            +{hiddenCount} more
+          </button>
+        )}
       </div>
 
       {lbOpen && (
