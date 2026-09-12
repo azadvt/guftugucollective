@@ -19,6 +19,7 @@ export default function Instagram() {
               <iframe
                 src="https://www.instagram.com/guftugu_collective/embed"
                 title="Guftugu Collective Instagram"
+                scrolling="no"
               ></iframe>
             </div>
           </div>
