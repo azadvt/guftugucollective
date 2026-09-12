@@ -1,0 +1,259 @@
+.hero {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ---- Ticker ---- */
+.ticker {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.ticker::before,
+.ticker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(14, 40, 20, 0.9), transparent);
+}
+
+.ticker::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(14, 40, 20, 0.9), transparent);
+}
+
+.tickerTrack {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollLeft 40s linear infinite;
+  width: max-content;
+}
+
+.tickerTrackReverse {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollRight 45s linear infinite;
+  width: max-content;
+}
+
+.tk {
+  flex-shrink: 0;
+  color: var(--text-faint);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: 0.05em;
+  padding: 0 1.2rem;
+}
+
+.tkDot {
+  flex-shrink: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--yellow-dim);
+}
+
+.tkKannada   { font-family: 'Noto Sans Kannada', sans-serif; }
+.tkDevanagari{ font-family: 'Noto Sans Devanagari', sans-serif; }
+.tkTamil     { font-family: 'Noto Sans Tamil', sans-serif; }
+.tkMalayalam { font-family: 'Noto Sans Malayalam', sans-serif; }
+.tkUrdu      { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; font-size: clamp(1.2rem, 2.4vw, 1.7rem); }
+.tkEnglish   { font-family: var(--font-display); font-style: italic; font-weight: 600; }
+
+.tickerTop { margin-bottom: 1.5rem; }
+.tickerBottom { margin-top: 1.5rem; }
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ---- Content ---- */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleBlock {
+  opacity: 0;
+  animation: revealTitle 1.2s ease 0.3s forwards;
+}
+
+.mainTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--yellow);
+  paint-order: stroke fill;
+  text-shadow: 0 0 80px var(--yellow-glow);
+}
+
+.mainSub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+  letter-spacing: clamp(0.8rem, 2vw, 1.6rem);
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-top: 2.1rem;
+}
+
+.middleInfo {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.thinLine {
+  width: 30px;
+  height: 1px;
+  background: var(--yellow);
+  opacity: 0.6;
+  margin-bottom: 0.3rem;
+}
+
+.filmSociety {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--cream-dim);
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1s forwards;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.2s forwards;
+}
+
+/* ---- Scroll hint ---- */
+.scrollHint {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.6s forwards;
+  z-index: 1;
+}
+
+.scrollHint span {
+  font-size: 0.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--yellow-dim), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealTitle {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 600px) {
+  .mainTitle {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+    -webkit-text-stroke: 1.5px var(--yellow);
+  }
+
+  .mainSub {
+    letter-spacing: 0.5rem;
+    font-size: 0.7rem;
+    margin-top: 1.2rem;
+  }
+
+  .ticker::before,
+  .ticker::after {
+    width: 30px;
+  }
+
+  .tk {
+    font-size: 0.85rem;
+    padding: 0 0.8rem;
+  }
+
+  .tkUrdu { font-size: 1rem; }
+  .tickerTop { margin-bottom: 0.8rem; }
+  .tickerBottom { margin-top: 0.8rem; }
+
+  .middleInfo {
+    margin-top: 1rem;
+    gap: 0.3rem;
+  }
+
+  .filmSociety {
+    font-size: 0.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .scrollHint { bottom: 1.2rem; }
+}

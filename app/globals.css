@@ -1,0 +1,182 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-deep: #1a4d28;
+  --green-dark: #0e2814;
+  --green-bg: #14371d;
+  --yellow: #e8c840;
+  --yellow-glow: rgba(232, 200, 64, 0.12);
+  --yellow-dim: rgba(232, 200, 64, 0.35);
+  --cream: #ede8dc;
+  --cream-dim: #9e9688;
+  --white: #f8f4eb;
+  --text-ghost: rgba(240, 235, 224, 0.08);
+  --text-faint: rgba(240, 235, 224, 0.2);
+  --text-muted: rgba(240, 235, 224, 0.4);
+  /* --font-display and --font-body are set by next/font in layout.js */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--green-dark);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Grain background ---- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 40%, var(--green-bg) 0%, var(--green-dark) 70%),
+    radial-gradient(ellipse at 20% 80%, rgba(26, 77, 40, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(26, 77, 40, 0.2) 0%, transparent 50%);
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---- Section shared ---- */
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 0;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.labelLine {
+  width: 30px;
+  height: 1px;
+  background: var(--yellow);
+  opacity: 0.6;
+}
+
+.labelText {
+  font-size: 0.6rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.sectionTitle em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--yellow);
+}
+
+.sectionSubtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnPrimary {
+  background: var(--yellow);
+  color: var(--green-dark);
+}
+
+.btnPrimary:hover {
+  background: var(--white);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(232, 200, 64, 0.3);
+}
+
+.btnOutline:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.btnSm {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.6rem;
+}
+
+.btnFull {
+  width: 100%;
+}
+
+/* ---- Divider ---- */
+.sectionDivider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(232, 200, 64, 0.15), transparent);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,253 @@
+.page {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 2rem 0;
+  transition: color 0.3s;
+}
+
+.back:hover {
+  color: var(--yellow);
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(232, 200, 64, 0.08);
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 40, 20, 0.95) 0%, rgba(14, 40, 20, 0.3) 50%);
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.5rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  background: rgba(232, 200, 64, 0.15);
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.tag_workshop {
+  background: rgba(71, 146, 163, 0.2);
+  color: #6bbcd0;
+}
+
+.tag_discussion {
+  background: rgba(183, 110, 170, 0.2);
+  color: #c47ab8;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+}
+
+.metaItem svg {
+  color: var(--yellow);
+  opacity: 0.7;
+}
+
+/* ---- Content grid ---- */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+}
+
+.main {
+  min-width: 0;
+}
+
+.description p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--cream-dim);
+  margin-bottom: 1.2rem;
+}
+
+.description strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.discussionNote {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(232, 200, 64, 0.1);
+  background: rgba(232, 200, 64, 0.02);
+  margin-top: 2rem;
+}
+
+.discussionNote svg {
+  color: var(--yellow);
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.discussionNote p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--cream-dim);
+  font-style: italic;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.registerCard {
+  border: 1px solid rgba(232, 200, 64, 0.12);
+  padding: 2rem;
+  background: rgba(14, 40, 20, 0.5);
+}
+
+.registerTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.registerDetail {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(232, 200, 64, 0.06);
+}
+
+.registerLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.registerValue {
+  font-size: 0.72rem;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.registerForm input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(232, 200, 64, 0.1);
+  outline: none;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 300;
+  transition: border-color 0.3s;
+}
+
+.registerForm input:focus {
+  border-color: rgba(232, 200, 64, 0.35);
+}
+
+.registerForm input::placeholder {
+  color: var(--text-muted);
+}
+
+.registerNote {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .heroContent {
+    padding: 1.5rem;
+  }
+
+  .meta {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 0 1.2rem 3rem;
+  }
+
+  .hero {
+    height: 250px;
+  }
+}

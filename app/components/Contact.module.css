@@ -1,0 +1,140 @@
+.contact {
+  border-top: 1px solid rgba(232, 200, 64, 0.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.text {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--cream-dim);
+  margin-bottom: 2rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--yellow);
+}
+
+.link svg {
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.note {
+  padding: 1.2rem;
+  border: 1px solid rgba(232, 200, 64, 0.08);
+  background: rgba(232, 200, 64, 0.02);
+}
+
+.note p {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--cream-dim);
+  font-style: italic;
+}
+
+/* ---- Form ---- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(232, 200, 64, 0.1);
+  outline: none;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 300;
+  transition: border-color 0.3s;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: rgba(232, 200, 64, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form select {
+  color: var(--text-muted);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239e9688' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form select option {
+  background: var(--green-dark);
+  color: var(--cream);
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ---- Success ---- */
+.success {
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(232, 200, 64, 0.15);
+  background: rgba(232, 200, 64, 0.02);
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--yellow);
+  margin-bottom: 0.8rem;
+}
+
+.successText {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .link {
+    padding: 0.3rem 0;
+  }
+}
