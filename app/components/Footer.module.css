@@ -17,8 +17,7 @@
   font-weight: 700;
   font-style: italic;
   font-size: 2rem;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--yellow);
+  color: var(--yellow);
   display: block;
   line-height: 1;
 }
