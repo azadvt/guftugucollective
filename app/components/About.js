@@ -57,43 +57,6 @@ export default function About() {
           </div>
         </div>
 
-        <div className={styles.team}>
-          <div className={styles.teamHeader}>
-            <h3 className={styles.teamTitle}>The People Behind Guftugu</h3>
-            <span className={styles.regNo}>Reg. No. KKD/229/2026</span>
-          </div>
-
-          <div className={styles.officeBearers}>
-            <div className={styles.bearer}>
-              <span className={styles.bearerRole}>President</span>
-              <span className={styles.bearerName}>Allan Shuaib</span>
-            </div>
-            <div className={styles.bearer}>
-              <span className={styles.bearerRole}>Secretary</span>
-              <span className={styles.bearerName}>Arshaq P</span>
-            </div>
-            <div className={styles.bearer}>
-              <span className={styles.bearerRole}>Treasurer</span>
-              <span className={styles.bearerName}>Thwaha Fasal</span>
-            </div>
-          </div>
-
-          <div className={styles.execSection}>
-            <span className={styles.execLabel}>Executive Members</span>
-            <div className={styles.execGrid}>
-              {[
-                'Ameen PV', 'Zahraf C K', 'Unais PK', 'Rubna P R',
-                'Nada', 'Fahad', 'Sreenath A', 'Ashfaaq EJ',
-                'Shameem Ali', 'Samar Aman', 'Aflah Al Zaman', 'Muhammad Rizwan',
-                'Sanu Hadeeba', 'Adv. Saleek CA', 'Adv. Sufaija', 'Studhi V',
-                'Abu Junaid', 'Muhsin Muneer',
-              ].map((name) => (
-                <span key={name} className={styles.execName}>{name}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );

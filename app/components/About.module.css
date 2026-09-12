@@ -129,87 +129,6 @@
   color: var(--text-muted);
 }
 
-/* ---- Team ---- */
-.team {
-  margin-top: 3rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(232, 200, 64, 0.08);
-}
-
-.teamHeader {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.teamTitle {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--white);
-}
-
-.regNo {
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  color: var(--cream);
-}
-
-.officeBearers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.bearer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.bearerRole {
-  font-size: 0.6rem;
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
-  color: var(--yellow);
-  font-weight: 500;
-}
-
-.bearerName {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.execSection {
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(232, 200, 64, 0.06);
-}
-
-.execLabel {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.execGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem 1.5rem;
-}
-
-.execName {
-  font-size: 0.88rem;
-  color: var(--cream);
-  line-height: 1.8;
-}
 
 @media (max-width: 768px) {
   .grid {
@@ -249,20 +168,6 @@
 
   .statNum {
     font-size: 1.8rem;
-  }
-
-  .teamHeader {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .officeBearers {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .execGrid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
