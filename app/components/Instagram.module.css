@@ -35,6 +35,7 @@
 
 .embed {
   width: 100%;
+  max-width: 540px;
   border: 1px solid rgba(232, 200, 64, 0.08);
   overflow: hidden;
   background: rgba(14, 40, 20, 0.3);
