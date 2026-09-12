@@ -13,13 +13,13 @@ export default function About() {
           <div>
             <h2 className="sectionTitle">Art beyond <em>profit</em></h2>
             <p className={styles.text}>
-              Guftugu is a film society built to create a network of socially and politically grounded art. The name means conversation in Urdu, and that{"'"}s exactly what we do. We show films, we talk about them, and sometimes those conversations change how we see things.
+              Guftugu is a film society built around socially and politically grounded art. In Urdu, the name means {"'"}conversation{"'"} —and that{"'"}s exactly what we do. We show films, and converse about the art, culture and patterns that lives in it, and sometimes, those interactions change the way we see things.
             </p>
             <p className={styles.text}>
               Inspired by the <em>Odessa Collective</em> and <em>Amma Ariyan</em>, we{"'"}re here to make and share art that goes beyond profit and entertainment. Founded in December 2024, the collective is based in Kozhikode, the cultural heart of Kerala.
             </p>
             <p className={styles.text}>
-              It started with a one-day film festival titled {'"'}Guftugu{'"'} where artists and social activists gathered from different fields. By August 2025, it had grown into something bigger, an organised, structured platform. That{"'"}s when Guftugu Collective as a film society was formally born.
+              Our debut began with a one-day film festival titled {'"'}Guftugu,{'"'} where artists and social activists gathered from different fields. By August 2025, our collective efforts shaped the society into an organized and structured platform. That was when Guftugu Collective was formally established as a film society.
             </p>
             <p className={styles.text}>
               For artistic and cultural collectives, what matters most is people{"'"}s participation and accessibility. They should not be reduced to commercial ventures or entertainment for a privileged few. These spaces must belong to everyone.

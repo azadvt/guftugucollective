@@ -2,7 +2,7 @@ export const featuredPrograms = [
   {
     id: 'guftugu-art-exhibition',
     title: 'Guftugu Art Exhibition',
-    subtitle: 'As part of Guftugu Film Festival',
+    subtitle: 'As part of the Guftugu Film Festival',
     date: 'February 1 – 7, 2026',
     venue: 'Lalithakala Art Gallery, Kozhikode',
     theme: 'Genocide',
@@ -45,7 +45,7 @@ export const featuredPrograms = [
     date: 'July, 2026',
     venue: 'Vedhi Auditorium, Kairali Sree, Kozhikode',
     theme: '',
-    desc: 'A festival dedicated to John Abraham, the filmmaker who proved cinema could belong to the people. Screenings, discussions, and a celebration of the man whose Odessa Collective remains the blueprint for everything we do.',
+    desc: 'A festival dedicated to John Abraham, the filmmaker who proved cinema could belong to the people. Screenings, discussions, and a celebration of the filmmaker whose Odessa Collective remains the blueprint for everything we do.',
     photos: [
       '/images/programs/john-abraham-film-fest/10b82ec5-2847-428b-9aba-126429bc671f.jpeg',
       '/images/programs/john-abraham-film-fest/1e7014a1-5d57-4e41-b346-29a95c68cb18.jpeg',
