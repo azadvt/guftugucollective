@@ -13,7 +13,7 @@ export default function About() {
           <div>
             <h2 className="sectionTitle">Art beyond <em>profit</em></h2>
             <p className={styles.text}>
-              Guftugu is a film society built around socially and politically grounded art. In Urdu, the name means {"'"}conversation{"'"} —and that{"'"}s exactly what we do. We show films, and converse about the art, culture and patterns that lives in it, and sometimes, those interactions change the way we see things.
+              Guftugu is a film society built around socially and politically grounded art. In Urdu, the name means {"'"}conversation{"'"} and that{"'"}s exactly what we do. We show films, and converse about the art, culture and patterns that lives in it, and sometimes, those interactions change the way we see things.
             </p>
             <p className={styles.text}>
               Inspired by the <em>Odessa Collective</em> and <em>Amma Ariyan</em>, we{"'"}re here to make and share art that goes beyond profit and entertainment. Founded in December 2024, the collective is based in Kozhikode, the cultural heart of Kerala.
