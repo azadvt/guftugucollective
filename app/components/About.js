@@ -11,7 +11,7 @@ export default function About() {
 
         <div className={styles.grid}>
           <div>
-            <h2 className="sectionTitle">Art beyond <em>commerce</em></h2>
+            <h2 className="sectionTitle">Art as <em>expression</em></h2>
             <p className={styles.text}>
               Guftugu is a film society built around socially and politically grounded art. In Urdu, the name means {"'"}conversation{"'"} and that{"'"}s exactly what we do. We show films, and converse about the art, culture and patterns that lives in it, and sometimes, those interactions change the way we see things.
             </p>
