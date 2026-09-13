@@ -13,6 +13,7 @@ export default function Footer() {
           <div className={styles.linksCol}>
             <h4>Navigate</h4>
             <a href="#about">About</a>
+            <a href="#team">Our People</a>
             <a href="#archive">Programs</a>
             <a href="#contact">Contact</a>
           </div>

@@ -48,7 +48,7 @@ export default function Hero() {
           <p className={styles.filmSociety}>A Film Society</p>
         </div>
 
-        <p className={styles.tagline}>Art Beyond Commerce. Cinema Beyond Entertainment.</p>
+        <p className={styles.tagline}>Art as Expression, Resistance, and Collective Imagination.</p>
 
         <div className={styles.actions}>
           <a href="#archive" className="btn btnPrimary">Our Programs</a>
