@@ -10,7 +10,7 @@ export default function Team() {
         </div>
 
         <h2 className="sectionTitle">The People Behind <em>Guftugu</em></h2>
-        <p className={styles.regNo}>Registered under Kerala Societies Registration Act, 2025 — Reg. No. KKD/229/2026</p>
+        <p className={styles.regNo}>Registered under Kerala Societies Registration Act, 2025 | Reg. No. KKD/229/2026</p>
 
         <div className={styles.officeBearers}>
           <div className={styles.bearer}>

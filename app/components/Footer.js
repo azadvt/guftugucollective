@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <span>Registered under Kerala Societies Registration Act, 2025 — Reg. No. KKD/229/2026</span>
+          <span>Registered under Kerala Societies Registration Act, 2025 | Reg. No. KKD/229/2026</span>
           <span>&copy; 2026 Guftugu Collective. All rights reserved.</span>
         </div>
       </div>
