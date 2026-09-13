@@ -16,7 +16,26 @@ const workSans = Work_Sans({
 
 export const metadata = {
   title: "Guftugu Collective — A Film Society",
-  description: "A community-driven film society dedicated to celebrating the art of cinema through screenings, workshops, and meaningful conversations.",
+  description: "Guftugu Collective is a film society based in Kozhikode, Kerala, built around socially and politically grounded art. Screenings, festivals, and conversations beyond commerce.",
+  keywords: ["Guftugu Collective", "film society", "Kozhikode", "Kerala", "independent cinema", "film festival", "art collective", "Odessa Collective", "political cinema"],
+  authors: [{ name: "Guftugu Collective" }],
+  metadataBase: new URL("https://guftugucollective.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Guftugu Collective — A Film Society",
+    description: "A film society in Kozhikode, Kerala, built around socially and politically grounded art. Art as Expression, Resistance, and Collective Imagination.",
+    url: "https://guftugucollective.com",
+    siteName: "Guftugu Collective",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guftugu Collective — A Film Society",
+    description: "A film society in Kozhikode, Kerala, built around socially and politically grounded art.",
+  },
   icons: {
     icon: "/icon.svg",
   },
