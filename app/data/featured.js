@@ -84,7 +84,7 @@ export const featuredPrograms = [
     subtitle: 'In support of research scholar Anagha Sasi',
     date: 'September 5, 2025',
     venue: 'Kozhikode',
-    theme: '',
+    theme: 'Solidarity with Anagha Sasi',
     desc: 'A solidarity protest organised in Kozhikode under the leadership of Guftugu Collective in support of research scholar Anagha Sasi and her protest.',
     photos: [
       '/images/programs/solidarity-protest-anagha-sasi/22ce4f81-ca11-4f2c-bec2-4e0cdd96905a.jpeg',
