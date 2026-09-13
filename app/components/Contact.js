@@ -51,6 +51,15 @@ export default function Contact() {
               Want to attend a screening? Collaborate on a project? Got a short film you want us to see? Or just want to argue about whether Tarkovsky is overrated? We{"'"}re based in Kozhikode, but the conversation is open to everyone.
             </p>
 
+            <div className={styles.address}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
+              <div>
+                <span>Guftugu Collective</span>
+                <span>60/2493 – A, East Kottaparamba</span>
+                <span>Kozhikode – 673002</span>
+              </div>
+            </div>
+
             <div className={styles.details}>
               <a href="https://www.instagram.com/guftugu_collective/" target="_blank" rel="noopener noreferrer" className={styles.link}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" /></svg>
