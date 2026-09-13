@@ -130,6 +130,8 @@ export const featuredPrograms = [
       '/images/programs/guftugu-one-day-festival/f580d9c5-2d92-4e3f-823a-f1744e9d3730.jpeg',
       '/images/programs/guftugu-one-day-festival/f6191ebf-a15b-4848-a666-bd58a650e664.jpeg',
       '/images/programs/guftugu-one-day-festival/fe3a5b17-dfea-4fc5-987b-1274d1203f6b.jpeg',
+      '/images/programs/guftugu-one-day-festival/cca30e73-c84b-4dc2-9240-a04d6d683c81-2.jpeg',
+      '/images/programs/guftugu-one-day-festival/fbcaee72-24ef-4ddf-98ff-94d43ed3d202.jpeg',
     ],
   },
 ];
