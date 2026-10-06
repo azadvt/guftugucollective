@@ -1,5 +1,17 @@
 export const featuredPrograms = [
   {
+    id: 'website-inauguration',
+    title: 'Website Inauguration',
+    subtitle: '',
+    date: 'October, 2026',
+    venue: 'M.N Vijayan Cultural Center, Kozhikode',
+    theme: '',
+    desc: 'The official Guftugu Collective website was inaugurated by K. S Hariharan at the M.N Vijayan Cultural Center. The website was designed and developed by Azad VT.',
+    photos: [
+      '/images/website-inauguration/34d91e74-10b4-4985-abc3-209df0854ea7.jpeg',
+    ],
+  },
+  {
     id: 'iffk-pamphlet-distribution',
     title: 'Pamphlet Distribution at IFFK',
     subtitle: '',
