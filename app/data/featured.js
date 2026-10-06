@@ -118,8 +118,8 @@ export const featuredPrograms = [
   },
   {
     id: 'guftugu-one-day-festival',
-    title: 'Political Prisoners',
-    subtitle: 'Guftugu, One-Day Film Festival',
+    title: 'Guftugu - One-Day Film Festival on Political Prisoners',
+    subtitle: '',
     date: 'December, 2024',
     venue: 'Kozhikode',
     theme: '',
