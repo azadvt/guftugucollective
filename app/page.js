@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import PhotoStrip from './components/PhotoStrip';
 import About from './components/About';
 import Team from './components/Team';
 import FeaturedPrograms from './components/FeaturedPrograms';
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <PhotoStrip />
         <div className="sectionDivider"></div>
         <About />
         <div className="sectionDivider"></div>

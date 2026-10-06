@@ -142,6 +142,17 @@ export default function FeaturedPrograms() {
     }
   }, [activeId]);
 
+  useEffect(() => {
+    const handler = (e) => {
+      const programId = e.detail;
+      if (featuredPrograms.some((p) => p.id === programId)) {
+        setActiveId(programId);
+      }
+    };
+    window.addEventListener('openProgram', handler);
+    return () => window.removeEventListener('openProgram', handler);
+  }, []);
+
   const activeProgram = featuredPrograms.find((p) => p.id === activeId);
 
   return (

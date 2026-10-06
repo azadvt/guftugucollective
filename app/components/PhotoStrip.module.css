@@ -1,0 +1,94 @@
+.strip {
+  width: 100vw;
+  overflow: hidden;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.strip::before,
+.strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.strip::before {
+  left: 0;
+  background: linear-gradient(to right, var(--green-dark), transparent);
+}
+
+.strip::after {
+  right: 0;
+  background: linear-gradient(to left, var(--green-dark), transparent);
+}
+
+.track {
+  display: flex;
+  gap: 0.8rem;
+  animation: filmScroll 35s linear infinite;
+  width: max-content;
+}
+
+.frame {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid rgba(232, 200, 64, 0.1);
+  cursor: pointer;
+}
+
+.frame img {
+  transition: transform 0.5s ease;
+}
+
+.frame:hover img {
+  transform: scale(1.05);
+}
+
+.frameLabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0.7rem;
+  background: linear-gradient(transparent, rgba(14, 40, 20, 0.85));
+  font-size: 0.6rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.frame:hover .frameLabel {
+  opacity: 1;
+}
+
+@keyframes filmScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .frame {
+    width: 220px;
+    height: 145px;
+  }
+
+  .strip {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame {
+    width: 180px;
+    height: 120px;
+  }
+}

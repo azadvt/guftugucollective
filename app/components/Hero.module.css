@@ -11,12 +11,46 @@
   overflow: hidden;
 }
 
+/* ---- Background Carousel ---- */
+.bgCarousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bgSlide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.bgSlide img {
+  animation: kenBurns 12s ease-in-out infinite alternate;
+}
+
+.bgSlideActive {
+  opacity: 1;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 40, 20, 0.88);
+  z-index: 1;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
 /* ---- Ticker ---- */
 .ticker {
   width: 100vw;
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .ticker::before,
@@ -95,7 +129,7 @@
 /* ---- Content ---- */
 .content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +216,7 @@
   gap: 0.5rem;
   opacity: 0;
   animation: fadeUp 0.8s ease 1.6s forwards;
-  z-index: 1;
+  z-index: 2;
 }
 
 .scrollHint span {
