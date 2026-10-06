@@ -1,5 +1,21 @@
 export const featuredPrograms = [
   {
+    id: 'iffk-pamphlet-distribution',
+    title: 'Pamphlet Distribution at IFFK',
+    subtitle: '',
+    date: '2025',
+    venue: 'IFFK',
+    theme: '',
+    desc: 'Pamphlet distribution by Guftugu Collective at the International Film Festival of Kerala (IFFK), 2025.',
+    photos: [
+      '/images/programs/iffk-pamphlet-distribution/709ba7c1-aa5d-4515-ae66-f2310acd4d7d.jpeg',
+      '/images/programs/iffk-pamphlet-distribution/94aae605-7d4d-4171-9d2c-a870694cd44a.jpeg',
+      '/images/programs/iffk-pamphlet-distribution/b5e8cc07-43e8-4a00-8589-68a3a6770b30.jpeg',
+      '/images/programs/iffk-pamphlet-distribution/e2035f5c-c40d-4d9c-900f-c8b4ebcef2e2.jpeg',
+      '/images/programs/iffk-pamphlet-distribution/fb7d9bcb-74a6-419f-82b0-f43be626a8b7.jpeg',
+    ],
+  },
+  {
     id: 'guftugu-art-exhibition',
     title: 'Guftugu Art Exhibition',
     subtitle: 'As part of the Guftugu Film Festival',
